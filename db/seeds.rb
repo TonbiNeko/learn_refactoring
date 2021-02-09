@@ -7,6 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-5.times do |i|
-  Blog.create!( title: "title#{i + 1}", content: "content#{i + 1}")
+# 5.times do |i|
+#   Blog.create!( title: "title#{i + 1}", content: "content#{i + 1}")
+# end
+
+4.times do |i|
+  Topic.create!( title: "title#{i + 1}", content: "content#{i + 1}")
 end
