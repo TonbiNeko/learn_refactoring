@@ -24,13 +24,14 @@ class Blog < ApplicationRecord
   #   end
   # end
 
-  before_create :defaulf_title
-  before_create :default_content
-  private
-  def defaulf_title
-    self.title = "タイトルなし" if self.title.blank?
-  end
-  def default_content
-    self.content = "内容なし" if self.content.blank?
-  end
+  before_create BlogCallback.new
+  # before_create :defaulf_title
+  # before_create :default_content
+  # private
+  # def defaulf_title
+  #   self.title = "タイトルなし" if self.title.blank?
+  # end
+  # def default_content
+  #   self.content = "内容なし" if self.content.blank?
+  # end
 end
